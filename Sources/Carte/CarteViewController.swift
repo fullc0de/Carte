@@ -41,7 +41,7 @@ open class CarteViewController: UITableViewController {
   private func adjustLeftBarButtonItemIfNeeded() {
     guard self.navigationItem.leftBarButtonItem == nil else { return }
 
-    let isPresented = (self.presentingViewController != nil)
+    let isPresented = (self.presentingViewController != nil && self.navigationController == nil)
     if isPresented {
       self.navigationItem.leftBarButtonItem = UIBarButtonItem(
         barButtonSystemItem: .done,
